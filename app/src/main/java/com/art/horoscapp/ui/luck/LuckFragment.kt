@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.art.horoscapp.R
 import com.art.horoscapp.databinding.FragmentHoroscopeBinding
 import com.art.horoscapp.databinding.FragmentLuckBinding
-import com.art.horoscapp.ui.horoscope.HocoscopeViewModel
+import com.art.horoscapp.ui.horoscope.HoroscopeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
