@@ -6,12 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.art.horoscapp.databinding.FragmentHoroscopeBinding
+import com.art.horoscapp.domain.model.HoroscopeInfo
+import com.art.horoscapp.domain.model.HoroscopeModel
 import com.art.horoscapp.ui.horoscope.adapter.HoroscopeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -25,7 +30,7 @@ class HoroscopeFragment : Fragment() {
 
     private lateinit var adapter: HoroscopeAdapter
 
-    private  var _binding: FragmentHoroscopeBinding? = null
+    private var _binding: FragmentHoroscopeBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -34,24 +39,38 @@ class HoroscopeFragment : Fragment() {
     }
 
     private fun initUI() {
-        initRecyclerView()
+        initList()
         initUIStateFlow()
     }
 
 
-    private fun initRecyclerView() {
-        adapter = HoroscopeAdapter()
+    private fun initList() {
+        adapter = HoroscopeAdapter(onItemSelected = {
+            val type:HoroscopeModel = when(it){
+                HoroscopeInfo.Aquarius -> HoroscopeModel.Aquarius
+                HoroscopeInfo.Aries -> HoroscopeModel.Aries
+                HoroscopeInfo.Cancer -> HoroscopeModel.Cancer
+                HoroscopeInfo.Capricornius -> HoroscopeModel.Capricornius
+                HoroscopeInfo.Gemini -> HoroscopeModel.Gemini
+                HoroscopeInfo.Leo -> HoroscopeModel.Leo
+                HoroscopeInfo.Libra -> HoroscopeModel.Libra
+                HoroscopeInfo.Pisces -> HoroscopeModel.Pisces
+                HoroscopeInfo.Sagitarius -> HoroscopeModel.Sagitarius
+                HoroscopeInfo.Scorpio -> HoroscopeModel.Scorpio
+                HoroscopeInfo.Taurus -> HoroscopeModel.Taurus
+                HoroscopeInfo.Virgo -> HoroscopeModel.Virgo
+            }
+            findNavController().navigate(HoroscopeFragmentDirections.actionHoroscopeFragmentToDetailActivity2(type))
+        })
 
-        binding.rvHoroscope.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = adapter
-        }
+        binding.rvHoroscope.layoutManager = GridLayoutManager(context, 3)
+        binding.rvHoroscope.adapter = adapter
     }
+
     private fun initUIStateFlow() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 horoscopeViewModel.horoscope.collect {
-                    Log.i("prueba", it.toString())
                     adapter.updateList(it)
                 }
             }

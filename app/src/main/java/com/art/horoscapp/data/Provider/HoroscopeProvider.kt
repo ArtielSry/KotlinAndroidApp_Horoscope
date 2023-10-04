@@ -1,4 +1,4 @@
-package com.art.horoscapp.data
+package com.art.horoscapp.data.Provider
 
 import com.art.horoscapp.domain.model.HoroscopeInfo
 import javax.inject.Inject
