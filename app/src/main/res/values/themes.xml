@@ -1,9 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.HoroscApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/primaryDark</item>
     </style>
 
+    <style name="title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/serif</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+
     <style name="Theme.HoroscApp" parent="Base.Theme.HoroscApp" />
+
+
 </resources>

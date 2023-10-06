@@ -19,10 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:fontFamily="@font/serif"
-            android:textSize="30sp" />
+            style="@style/title"
+            />
     </FrameLayout>
 
     <androidx.fragment.app.FragmentContainerView
