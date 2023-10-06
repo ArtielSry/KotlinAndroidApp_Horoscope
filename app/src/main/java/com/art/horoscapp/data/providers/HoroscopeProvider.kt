@@ -14,8 +14,8 @@ class HoroscopeProvider@Inject constructor() {
             HoroscopeInfo.Virgo,
             HoroscopeInfo.Libra,
             HoroscopeInfo.Scorpio,
-            HoroscopeInfo.Sagitarius,
-            HoroscopeInfo.Capricornius,
+            HoroscopeInfo.Sagittarius,
+            HoroscopeInfo.Capricorn,
             HoroscopeInfo.Aquarius,
             HoroscopeInfo.Pisces
         )

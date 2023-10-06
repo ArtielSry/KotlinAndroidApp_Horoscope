@@ -50,12 +50,12 @@ class HoroscopeFragment : Fragment() {
                 HoroscopeInfo.Aquarius -> HoroscopeModel.Aquarius
                 HoroscopeInfo.Aries -> HoroscopeModel.Aries
                 HoroscopeInfo.Cancer -> HoroscopeModel.Cancer
-                HoroscopeInfo.Capricornius -> HoroscopeModel.Capricornius
+                HoroscopeInfo.Capricorn -> HoroscopeModel.Capricorn
                 HoroscopeInfo.Gemini -> HoroscopeModel.Gemini
                 HoroscopeInfo.Leo -> HoroscopeModel.Leo
                 HoroscopeInfo.Libra -> HoroscopeModel.Libra
                 HoroscopeInfo.Pisces -> HoroscopeModel.Pisces
-                HoroscopeInfo.Sagitarius -> HoroscopeModel.Sagitarius
+                HoroscopeInfo.Sagittarius -> HoroscopeModel.Sagittarius
                 HoroscopeInfo.Scorpio -> HoroscopeModel.Scorpio
                 HoroscopeInfo.Taurus -> HoroscopeModel.Taurus
                 HoroscopeInfo.Virgo -> HoroscopeModel.Virgo

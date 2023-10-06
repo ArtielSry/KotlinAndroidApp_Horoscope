@@ -13,8 +13,8 @@ sealed class HoroscopeInfo(
     data object Virgo : HoroscopeInfo(R.drawable.virgo, R.string.virgo)
     data object Libra : HoroscopeInfo(R.drawable.libra, R.string.libra)
     data object Scorpio : HoroscopeInfo(R.drawable.scorpio, R.string.scorpio)
-    data object Sagitarius : HoroscopeInfo(R.drawable.sagitarius, R.string.sagitarius)
-    data object Capricornius : HoroscopeInfo(R.drawable.capricornius, R.string.capircornus)
+    data object Sagittarius : HoroscopeInfo(R.drawable.sagitarius, R.string.sagittarius)
+    data object Capricorn : HoroscopeInfo(R.drawable.capricornus, R.string.capricorn)
     data object Aquarius : HoroscopeInfo(R.drawable.aquarius, R.string.aquarius)
     data object Pisces : HoroscopeInfo(R.drawable.pisces, R.string.pisces)
 }

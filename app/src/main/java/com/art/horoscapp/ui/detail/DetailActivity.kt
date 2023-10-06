@@ -73,7 +73,6 @@ class DetailActivity : AppCompatActivity() {
         binding.tvDetail.text = state.sign
         binding.tvPrediction.text = state.prediction
 
-
         val image = when (state.horoscopeModel) {
             Aries -> R.drawable.aries
             Taurus -> R.drawable.taurus
@@ -83,11 +82,11 @@ class DetailActivity : AppCompatActivity() {
             Virgo -> R.drawable.virgo
             Libra -> R.drawable.libra
             Scorpio -> R.drawable.scorpio
-            Sagitarius -> R.drawable.sagitarius
-            Capricornius -> R.drawable.capricornius
+            Sagittarius -> R.drawable.sagitarius
+            Capricorn -> R.drawable.capricornus
             Aquarius -> R.drawable.aquarius
             Pisces -> R.drawable.pisces
-
         }
+        binding.ivDetail.setImageResource(image)
     }
 }
