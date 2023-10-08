@@ -1,5 +1,6 @@
 package com.art.horoscapp.ui.horoscope
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.art.horoscapp.R
 import com.art.horoscapp.databinding.FragmentHoroscopeBinding
 import com.art.horoscapp.domain.model.HoroscopeInfo
 import com.art.horoscapp.domain.model.HoroscopeModel
@@ -60,10 +62,11 @@ class HoroscopeFragment : Fragment() {
                 HoroscopeInfo.Taurus -> HoroscopeModel.Taurus
                 HoroscopeInfo.Virgo -> HoroscopeModel.Virgo
             }
+
             findNavController().navigate(HoroscopeFragmentDirections.actionHoroscopeFragmentToDetailActivity2(type))
         })
 
-        binding.rvHoroscope.layoutManager = GridLayoutManager(context, 3)
+        binding.rvHoroscope.layoutManager = LinearLayoutManager(context)
         binding.rvHoroscope.adapter = adapter
     }
 

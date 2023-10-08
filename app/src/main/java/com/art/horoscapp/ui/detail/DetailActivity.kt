@@ -1,8 +1,10 @@
 package com.art.horoscapp.ui.detail
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AlphaAnimation
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
@@ -22,6 +24,8 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private val detailViewModel: DetailViewModel by viewModels()
 
+    private lateinit var mediaPlayer: MediaPlayer
+
     private val args: DetailActivityArgs by navArgs()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +44,11 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
-        binding.btnBack.setOnClickListener { onBackPressed() }
+        binding.btnBack.setOnClickListener {
+            mediaPlayer = MediaPlayer.create(this, R.raw.click)
+            mediaPlayer.start()
+            onBackPressed()
+        }
     }
 
     private fun initUIState() {
@@ -74,18 +82,18 @@ class DetailActivity : AppCompatActivity() {
         binding.tvPrediction.text = state.prediction
 
         val image = when (state.horoscopeModel) {
-            Aries -> R.drawable.aries
-            Taurus -> R.drawable.taurus
-            Gemini -> R.drawable.gemini
-            Cancer -> R.drawable.cancer
-            Leo -> R.drawable.leo
-            Virgo -> R.drawable.virgo
-            Libra -> R.drawable.libra
-            Scorpio -> R.drawable.scorpio
-            Sagittarius -> R.drawable.sagitarius
-            Capricorn -> R.drawable.capricornus
-            Aquarius -> R.drawable.aquarius
-            Pisces -> R.drawable.pisces
+            Aries -> R.drawable.aries_stars
+            Taurus -> R.drawable.taurus_stars
+            Gemini -> R.drawable.gemini_stars
+            Cancer -> R.drawable.cancer_stars
+            Leo -> R.drawable.leo_stars
+            Virgo -> R.drawable.virgo_stars
+            Libra -> R.drawable.libra_stars
+            Scorpio -> R.drawable.scorpio_stars
+            Sagittarius -> R.drawable.sagitarius_stars
+            Capricorn -> R.drawable.capricornus_stars
+            Aquarius -> R.drawable.aquarius_stars
+            Pisces -> R.drawable.pisces_stars
         }
         binding.ivDetail.setImageResource(image)
     }

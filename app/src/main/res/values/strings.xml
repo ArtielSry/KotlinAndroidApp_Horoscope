@@ -3,6 +3,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="welcome">Welcome to Dark Horoscope</string>
+    <string name="welcome_description">Discover your luck today</string>
+
     <!-- bottom bar -->
     <string name="horoscope">Horoscope</string>
     <string name="palmistry">Palmistry</string>
@@ -10,17 +14,47 @@
 
     <!-- zodiac -->
 
-    <string name="aries">Aries</string>
-    <string name="taurus">Taurus</string>
-    <string name="gemini">Gemini</string>
-    <string name="cancer">Cancer</string>
-    <string name="leo">Leo</string>
-    <string name="virgo">Virgo</string>
-    <string name="libra">Libra</string>
-    <string name="scorpio">Scorpio</string>
-    <string name="sagittarius">Sagittarius</string>
-    <string name="capricorn">Capricorn</string>
-    <string name="aquarius">Aquarius</string>
-    <string name="pisces">Pisces</string>
+    <string name="aries">ARIES</string>
+    <string name="taurus">TAURUS</string>
+    <string name="gemini">GEMINI</string>
+    <string name="cancer">CANCER</string>
+    <string name="leo">LEO</string>
+    <string name="virgo">VIRGO</string>
+    <string name="libra">LIBRA</string>
+    <string name="scorpio">SCORPIO</string>
+    <string name="sagittarius">SAGITTARIUS</string>
+    <string name="capricorn">CAPRICORN</string>
+    <string name="aquarius">AQUARIUS</string>
+    <string name="pisces">PISCES</string>
+
+    <!-- zodiac date -->
+
+    <string name="aries_date">March 21-April 19</string>
+    <string name="taurus_date">April 20-May 20</string>
+    <string name="gemini_date">May 21-June 20</string>
+    <string name="cancer_date">June 21-July 22</string>
+    <string name="leo_date">July 23-August 22</string>
+    <string name="virgo_date">August 23-September 22</string>
+    <string name="libra_date">September 23-October 22</string>
+    <string name="scorpio_date">October 23-November 21</string>
+    <string name="sagittarius_date">November 22-December 21</string>
+    <string name="capricorn_date">December 22-January 19</string>
+    <string name="aquarius_date">Jan 20-Feb 18</string>
+    <string name="pisces_date">Feb 19-March 20</string>
+
+    <!-- zodiac date -->
+
+    <string name="aries_feature">Courage</string>
+    <string name="taurus_feature">Stability</string>
+    <string name="gemini_feature">Sympathy</string>
+    <string name="cancer_feature">Loyalty</string>
+    <string name="leo_feature">Confidence</string>
+    <string name="virgo_feature">Perfectionism</string>
+    <string name="libra_feature">Balance</string>
+    <string name="scorpio_feature">Passion</string>
+    <string name="sagittarius_feature">Spontaneity</string>
+    <string name="capricorn_feature">Consistency</string>
+    <string name="aquarius_feature">Philosophical</string>
+    <string name="pisces_feature">Romance</string>
 
 </resources>

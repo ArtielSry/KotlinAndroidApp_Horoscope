@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             style="@style/title"
+            android:layout_marginStart="20dp"
             />
     </FrameLayout>
 
@@ -42,19 +43,26 @@
         android:id="@+id/bottomNavView"
 
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
+
+
+        android:background="@color/primaryDark"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/bottom_nav_selector"
+
+
+        app:itemTextAppearance="@dimen/design_bottom_navigation_text_size"
+        app:itemTextAppearanceActive="@dimen/design_bottom_navigation_text_size"
+        app:itemTextAppearanceInactive="@dimen/design_bottom_navigation_text_size"
+        app:itemTextColor="@color/bottom_nav_selector"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:itemIconTint="@color/bottom_nav_selector"
-        app:itemTextColor="@color/bottom_nav_selector"
-        app:itemActiveIndicatorStyle="@null"
+
 
         app:menu="@menu/bottom_menu"
-
-        android:background="@color/primaryDark"
-
         />
 
 
