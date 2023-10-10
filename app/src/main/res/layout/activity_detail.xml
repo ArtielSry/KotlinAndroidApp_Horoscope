@@ -75,14 +75,11 @@
             app:tint="@color/tr"
             android:layout_marginBottom="40dp"/>
 
-
-
         <TextView
             android:id="@+id/tvPrediction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:textAlignment="center"
             android:textColor="@color/gold"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"

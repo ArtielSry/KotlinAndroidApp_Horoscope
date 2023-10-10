@@ -40,7 +40,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
-            android:text="aries"
             android:textColor="@color/tr"
             android:textSize="13sp"
 
@@ -51,7 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
-            android:text="21 nov - 13 dec"
             android:textColor="@color/gold"
             android:textSize="11sp"
             android:textStyle="normal" />
@@ -61,8 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
-            android:text="Crueles, apasionados y romanticos"
-            android:textColor="@color/gold"
+            android:textColor="@color/gray"
             android:textSize="11sp"
             android:textStyle="normal" />
 
