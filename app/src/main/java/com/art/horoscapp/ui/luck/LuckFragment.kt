@@ -1,6 +1,7 @@
 package com.art.horoscapp.ui.luck
 
 import android.animation.ObjectAnimator
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,16 +17,22 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.art.horoscapp.R
 import com.art.horoscapp.databinding.FragmentLuckBinding
+import com.art.horoscapp.ui.providers.RandomCardProvider
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 
 class LuckFragment : Fragment() {
 
-    private val luckViewModel by viewModels<LuckViewModel>()
 
     private var _binding: FragmentLuckBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var mediaPlayer: MediaPlayer
+
+    @Inject
+    lateinit var randomCardProvider: RandomCardProvider
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,7 +40,17 @@ class LuckFragment : Fragment() {
     }
 
     private fun initUI() {
+        preparePrediction()
         initListeners()
+    }
+
+    private fun preparePrediction() {
+        val luck = randomCardProvider.getLucky()
+        luck?.let {
+            binding.tvLucky.text = getString(it.text)
+            binding.tvLuckyDescription.text = getString(it.description)
+            binding.ivLuckyCard.setImageResource(it.image)
+        }
     }
 
     private fun initListeners() {
@@ -55,8 +72,12 @@ class LuckFragment : Fragment() {
     private fun slideCard() {
         val slideUpAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.slide_up)
 
+        mediaPlayer = MediaPlayer.create(context, R.raw.card_slide)
+
         slideUpAnimation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation?) {
+
+                mediaPlayer.start()
                 binding.card.isVisible = true
             }
             override fun onAnimationEnd(animation: Animation?) {
@@ -86,6 +107,8 @@ class LuckFragment : Fragment() {
     }
 
     private fun showPrediction(){
+        mediaPlayer = MediaPlayer.create(context, R.raw.showing_card)
+
         val disappearAnimation = AlphaAnimation(1.0f, 0.0f)
         disappearAnimation.duration = 200
 
@@ -95,6 +118,7 @@ class LuckFragment : Fragment() {
         disappearAnimation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation?) {}
             override fun onAnimationEnd(animation: Animation?) {
+                mediaPlayer.start()
                 binding.preview.isVisible = false
                 binding.prediction.isVisible = true
             }

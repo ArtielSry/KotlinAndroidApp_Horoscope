@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
+    android:padding="40dp"
     tools:context=".ui.luck.LuckFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
         <ImageView
             android:id="@+id/card"
@@ -46,13 +48,13 @@
         android:id="@+id/prediction"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible"
-        android:layout_marginBottom="80dp">
+        tools:visibility="visible">
 
         <ImageView
             android:id="@+id/ivLuckyCard"
@@ -61,33 +63,63 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/red" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/tvLucky"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            style="@style/title"
+        <LinearLayout
+            android:id="@+id/tvLuckyTexts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_margin="24dp"
-            tools:text="Texto de la suerte en la carta"
-            app:layout_constraintBottom_toTopOf="@id/share"
+            app:layout_constraintBottom_toTopOf="@+id/share"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard"/>
+            app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard">
+
+            <TextView
+                android:id="@+id/tvLucky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@color/tr"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@id/tvLuckyDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard" />
+
+            <TextView
+                android:id="@+id/tvLuckyDescription"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/gold"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLuckyTexts" />
+        </LinearLayout>
+
+
+
 
         <TextView
             android:id="@+id/share"
             android:layout_width="0dp"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="@string/share_card"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLucky"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLuckyTexts" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
