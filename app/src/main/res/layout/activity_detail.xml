@@ -52,6 +52,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_share"
             android:layout_marginTop="7dp"
+            android:visibility="invisible"
             android:padding="10dp"
             app:tint="@color/gray"
             />

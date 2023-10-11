@@ -1,6 +1,7 @@
 package com.art.horoscapp.ui.luck
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -45,12 +46,25 @@ class LuckFragment : Fragment() {
     }
 
     private fun preparePrediction() {
-        val luck = randomCardProvider.getLucky()
-        luck?.let {
-            binding.tvLucky.text = getString(it.text)
-            binding.tvLuckyDescription.text = getString(it.description)
-            binding.ivLuckyCard.setImageResource(it.image)
+        val currentLuck = randomCardProvider.getLucky()
+        currentLuck?.let {luck ->
+            val currentPrediction = getString(luck.description)
+            binding.tvLucky.text = getString(luck.text)
+            binding.tvLuckyDescription.text = currentPrediction
+            binding.ivLuckyCard.setImageResource(luck.image)
+            binding.share.setOnClickListener { shareResult(currentPrediction) }
         }
+    }
+
+    private fun shareResult(prediction:String) {
+        val sendIntent:Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, prediction)
+            type = "text/plain"
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(sendIntent)
     }
 
     private fun initListeners() {
@@ -58,12 +72,15 @@ class LuckFragment : Fragment() {
     }
 
     private fun spinRoulette() {
+
+        mediaPlayer = MediaPlayer.create(context, R.raw.roulette)
         val random = java.util.Random()
         val degrees = random.nextInt(1440) + 360
 
         val animator = ObjectAnimator.ofFloat(binding.ivRoulette, View.ROTATION, 0f, degrees.toFloat())
+        mediaPlayer.start()
         binding.card.isVisible = false
-        animator.duration = 2000
+        animator.duration = 1500
         animator.interpolator = DecelerateInterpolator()
         animator.doOnEnd { slideCard() }
         animator.start()
