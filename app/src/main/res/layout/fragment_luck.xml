@@ -67,7 +67,7 @@
 
         <LinearLayout
             android:id="@+id/tvLuckyTexts"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
@@ -85,6 +85,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:textColor="@color/tr"
+                android:fontFamily="@font/regular"
                 android:textAlignment="center"
                 android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toTopOf="@id/tvLuckyDescription"
@@ -94,9 +95,10 @@
 
             <TextView
                 android:id="@+id/tvLuckyDescription"
-                style="@style/title"
-                android:layout_width="wrap_content"
+                android:fontFamily="@font/regular22"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/gold"

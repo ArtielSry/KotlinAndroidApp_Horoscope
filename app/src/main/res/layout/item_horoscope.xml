@@ -49,7 +49,7 @@
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
+            android:fontFamily="@font/regular22"
             android:textColor="@color/gold"
             android:textSize="11sp"
             android:textStyle="normal" />
@@ -58,7 +58,7 @@
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
+            android:fontFamily="@font/regular22"
             android:textColor="@color/gray"
             android:textSize="11sp"
             android:textStyle="normal" />
