@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+
+
+    <color name="statusbar">#0392CA</color>
+
+    <color name="primary">#EFEFEF</color>
+    <color name="primaryDark">#FFFFFF</color>
+    <color name="secondary">#32FFEB3B</color>
+    <color name="accent">#CDB083</color>
+    <color name="gold">#000000</color>
+
+    <color name="pressed">#DCDCDC</color>
+
+    <color name="red">#FF0000</color>
+
+    <color name="gray">#838383</color>
+    <color name="tr">#0392CA</color>
+</resources>

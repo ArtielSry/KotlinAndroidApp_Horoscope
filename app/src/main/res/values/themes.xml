@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.HoroscApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/primaryDark</item>
+        <item name="android:statusBarColor">@color/statusbar</item>
+
     </style>
 
     <style name="title">

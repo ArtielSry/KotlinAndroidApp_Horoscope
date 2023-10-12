@@ -22,6 +22,30 @@
             style="@style/title"
             android:layout_marginStart="20dp"
             />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDarkMode"
+                android:visibility="visible"
+
+                android:paddingEnd="1000dp"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_dark_mode"
+                app:tint="@color/white"
+                android:padding="20dp"/>
+        </FrameLayout>
+
+
     </FrameLayout>
 
     <androidx.fragment.app.FragmentContainerView
