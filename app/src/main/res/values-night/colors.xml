@@ -4,7 +4,7 @@
     <color name="white">#FF000000</color>
 
 
-    <color name="statusbar">#0392CA</color>
+    <color name="statusbar">#A88826 </color>
 
     <color name="primary">#EFEFEF</color>
     <color name="primaryDark">#FFFFFF</color>
@@ -17,5 +17,5 @@
     <color name="red">#FF0000</color>
 
     <color name="gray">#838383</color>
-    <color name="tr">#0392CA</color>
+    <color name="tr">#A88826</color>
 </resources>

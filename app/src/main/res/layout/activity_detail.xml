@@ -16,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/primaryDark">
+        android:background="@color/primaryDark"
+        android:layout_marginBottom="50dp">
 
         <ImageView
             android:id="@+id/btnBack"

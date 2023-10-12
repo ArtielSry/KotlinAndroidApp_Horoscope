@@ -45,7 +45,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun initListener() {
         binding.btnBack.setOnClickListener {
-            mediaPlayer = MediaPlayer.create(this, R.raw.click)
+            mediaPlayer = MediaPlayer.create(this, R.raw.clickback)
             mediaPlayer.start()
             onBackPressed()
         }
