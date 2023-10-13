@@ -11,8 +11,9 @@ Black Horoscope app is a mobile app for daily horoscope reading, tarot card play
 - Camera permissions management
 
 ## Screenshots
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 1](images/horoscope1.png)
+![Screenshot 2](images/horoscope2.png)
+![Screenshot 3](images/horoscope3.png)
 
 ## System Requirements
 - Android devices with Android version [Minimum Android version supported].
