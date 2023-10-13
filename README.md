@@ -12,7 +12,7 @@ Black Horoscope app is a mobile app for daily horoscope reading, tarot card play
 - Data persistence for night mode
 
 ![horoscope1](https://github.com/ArtielSry/KotlinAndroidApp_Horoscope/assets/113340763/fcbc2e3d-5848-4f32-9707-0163b4dc7369)
-![horoscope2](https://github.com/ArtielSry/KotlinAndroidApp_Horoscope/assets/113340763/cc34e055-5eaa-41cb-87e9-7c83770dc313)
+![274884471-cc34e055-5eaa-41cb-87e9-7c83770dc313](https://github.com/ArtielSry/KotlinAndroidApp_Horoscope/assets/113340763/6f635c7b-53ec-4757-ab74-91e8f5b7e7d0)
 ![horoscope3](https://github.com/ArtielSry/KotlinAndroidApp_Horoscope/assets/113340763/5864a14d-573c-4474-977e-f2937333c05f)
 
 
