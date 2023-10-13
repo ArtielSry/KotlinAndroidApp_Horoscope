@@ -17,4 +17,12 @@
     <style name="Theme.HoroscApp" parent="Base.Theme.HoroscApp" />
 
 
+    //splash
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.HoroscApp</item>
+    </style>
+
 </resources>
